@@ -263,10 +263,10 @@ class GpsValidator {
     final dLon = _toRadians(lon2 - lon1);
     final a =
         sin(dLat / 2) * sin(dLat / 2) +
-        cos(_toRadians(lat1)) *
-            cos(_toRadians(lat2)) *
-            sin(dLon / 2) *
-            sin(dLon / 2);
+            cos(_toRadians(lat1)) *
+                cos(_toRadians(lat2)) *
+                sin(dLon / 2) *
+                sin(dLon / 2);
     return earthRadius * 2 * atan2(sqrt(a), sqrt(1 - a));
   }
 
@@ -437,10 +437,10 @@ class MarcAppState extends ChangeNotifier {
 
   bool deleteStop(String stopId) {
     final hasEmployees = employees.any(
-      (employee) => employee.assignedStopId == stopId,
+          (employee) => employee.assignedStopId == stopId,
     );
     final hasAttendance = attendanceRecords.any(
-      (record) => record.stopId == stopId,
+          (record) => record.stopId == stopId,
     );
     if (hasEmployees || hasAttendance) return false;
     stops.removeWhere((stop) => stop.id == stopId);
@@ -454,7 +454,7 @@ class MarcAppState extends ChangeNotifier {
     joinRequests[index] = joinRequests[index].copyWith(status: status);
     if (status == RequestStatus.accepted) {
       final employeeIndex = employees.indexWhere(
-        (employee) => employee.id == joinRequests[index].employeeId,
+            (employee) => employee.id == joinRequests[index].employeeId,
       );
       if (employeeIndex != -1) {
         employees[employeeIndex] = employees[employeeIndex].copyWith(
@@ -470,8 +470,8 @@ class MarcAppState extends ChangeNotifier {
     final company = companies.first;
     if (employee == null) return;
     final exists = joinRequests.any(
-      (request) =>
-          request.employeeId == employee.id &&
+          (request) =>
+      request.employeeId == employee.id &&
           request.status == RequestStatus.pending,
     );
     if (exists) return;
@@ -557,7 +557,7 @@ class MarcAppState extends ChangeNotifier {
         name: 'Constructora Andina SAC',
         ruc: '20548796321',
         description:
-            'Empresa de obras civiles que controla asistencia en paradas autorizadas.',
+        'Empresa de obras civiles que controla asistencia en paradas autorizadas.',
       ),
     );
     stops.addAll([
