@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import '../../src/app_state.dart';
+import '../recuperar_contrasena/recuperar_contrasena.dart';
 import '../resumen_empleado/resumen_empleado.dart';
 import '../resumen_empresa/resumen_empresa.dart';
+import '../registrar_usuario/registrar_usuario.dart';
 
 bool rememberUser = false;
 final emailController = TextEditingController();
@@ -181,30 +183,79 @@ class _SignInPageState extends State<SignInPage> {
 
               const SizedBox(height: 90),
 
-              // TEXTS
-              const Padding(
-                padding: EdgeInsets.symmetric(horizontal: 30),
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 30),
+
                 child: Column(
+
                   children: [
-                    Text(
-                      '¿Ha olvidado su contraseña? Haga click aquí',
-                      textAlign: TextAlign.center,
-                      style: TextStyle(
-                        color: Colors.white70,
-                        fontSize: 15,
+
+                    // RECUPERAR CONTRASEÑA
+                    GestureDetector(
+
+                      onTap: () {
+
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (_) => const RecuperarContrasenaPage(),
+                          ),
+                        );
+
+                      },
+
+                      child: const Text(
+
+                        '¿Ha olvidado su contraseña? Haga click aquí',
+
+                        textAlign: TextAlign.center,
+
+                        style: TextStyle(
+                          color: Colors.white70,
+                          fontSize: 15,
+                          decoration: TextDecoration.underline,
+                        ),
+
                       ),
+
                     ),
-                    SizedBox(height: 10),
-                    Text(
-                      '¿Aún no es miembro? Regístrese ahora',
-                      textAlign: TextAlign.center,
-                      style: TextStyle(
-                        color: Colors.white70,
-                        fontSize: 15,
+
+                    const SizedBox(height: 10),
+
+                    // REGISTRARSE
+                    GestureDetector(
+
+                      onTap: () {
+
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (_) => const RegistrarUsuarioPage(),
+                          ),
+                        );
+
+                      },
+
+                      child: const Text(
+
+                        '¿Aún no es miembro? Regístrese ahora',
+
+                        textAlign: TextAlign.center,
+
+                        style: TextStyle(
+                          color: Colors.white70,
+                          fontSize: 15,
+                          decoration: TextDecoration.underline,
+                        ),
+
                       ),
+
                     ),
+
                   ],
+
                 ),
+
               ),
             ],
           ),
