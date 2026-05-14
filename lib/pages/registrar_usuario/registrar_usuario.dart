@@ -99,7 +99,7 @@ class RegistrarUsuarioPage extends StatelessWidget {
                 // EMPRESA
                 SizedBox(
 
-                  width: 140,
+                  width: 170,
                   height: 60,
 
                   child: ElevatedButton(
@@ -143,7 +143,7 @@ class RegistrarUsuarioPage extends StatelessWidget {
                 // EMPLEADO
                 SizedBox(
 
-                  width: 140,
+                  width: 170,
                   height: 60,
 
                   child: ElevatedButton(
@@ -190,35 +190,6 @@ class RegistrarUsuarioPage extends StatelessWidget {
 
             const SizedBox(height: 70),
 
-            // BUTTON SIGUIENTE
-            SizedBox(
-
-              width: 120,
-              height: 45,
-
-              child: ElevatedButton(
-
-                style: ElevatedButton.styleFrom(
-
-                  backgroundColor: const Color(0xFFF4D35E),
-
-                ),
-
-                onPressed: () {},
-
-                child: const Text(
-
-                  'Siguiente',
-
-                  style: TextStyle(
-                    color: Colors.black,
-                  ),
-
-                ),
-
-              ),
-
-            ),
 
           ],
 
