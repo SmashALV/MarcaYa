@@ -30,6 +30,8 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  http: ^1.6.0
+  flutter_secure_storage: ^10.2.0
 
   font_awesome_flutter: ^10.7.0
 
