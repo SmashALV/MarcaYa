@@ -33,5 +33,6 @@ void main() {
     await tester.pumpAndSettle();
 
     expect(find.textContaining('código de verificación'), findsOneWidget);
+    expect(find.text('Confirmar registro'), findsOneWidget);
   });
 }

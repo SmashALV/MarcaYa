@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
-import '../codigo_contrasena/codigo_contrasena.dart';
+import '../codigo_registro_empleado/codigo_registro_empleado.dart';
 
 class RegistrarEmpleadoPage extends StatefulWidget {
   const RegistrarEmpleadoPage({super.key});
@@ -62,7 +62,7 @@ class _RegistrarEmpleadoPageState extends State<RegistrarEmpleadoPage> {
 
     Navigator.push(
       context,
-      MaterialPageRoute(builder: (_) => const CodigoContrasenaPage()),
+      MaterialPageRoute(builder: (_) => const CodigoRegistroEmpleadoPage()),
     );
   }
 
