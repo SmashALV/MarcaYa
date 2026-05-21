@@ -159,14 +159,12 @@ class RegistrarUsuarioPage extends StatelessWidget {
                     ),
 
                     onPressed: () {
-                      /*
                       Navigator.push(
                         context,
                         MaterialPageRoute(
                           builder: (_) => const RegistrarEmpleadoPage(),
                         ),
                       );
-                      */
                     },
 
                     child: const Text(
